@@ -1,0 +1,23 @@
+judge check {'reference_judged_correct': 1.0, 'other_reference_judged_incorrect': 1.0, 'n': 50}
+W1017 02:29:39.207000 42832 .venv/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+7B + hybrid (no reranker) 2058s
+7B + cross-encoder 1988s
+7B + LTR(+CE) + refusal gate 1752s
+3B + cross-encoder 1143s
+                              answer_correct  gold_cited  false_refusal  refused_unanswerable  grounded_citations  needs_review  p50_latency_s  p95_latency_s  tokens_per_question
+config                                                                                                                                                                            
+3B + cross-encoder                      0.77        0.70           0.04                 0.767               0.951         0.162          6.715          9.075             1460.877
+7B + LTR(+CE) + refusal gate            0.77        0.85           0.13                 0.833               0.978         0.015         13.097         17.862             1139.308
+7B + cross-encoder                      0.83        0.87           0.03                 0.933               0.980         0.023         13.459         18.192             1453.508
+7B + hybrid (no reranker)               0.80        0.86           0.02                 0.867               0.971         0.038         13.888         19.188             1455.708
+                                     answer_correct  gold_cited
+config                       style                             
+3B + cross-encoder           formal            0.80        0.70
+                             plain             0.74        0.70
+7B + LTR(+CE) + refusal gate formal            0.82        0.90
+                             plain             0.72        0.80
+7B + cross-encoder           formal            0.88        0.92
+                             plain             0.78        0.82
+7B + hybrid (no reranker)    formal            0.78        0.90
+                             plain             0.82        0.82
+PIPE_DONE

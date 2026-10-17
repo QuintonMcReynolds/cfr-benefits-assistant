@@ -1,0 +1,37 @@
+name: ci
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+      - run: ruff check app scripts tests
+      - run: mypy
+      - name: rebuild the corpus from the committed eCFR XML and check it matches the manifest
+        run: |
+          python -m app.ingest > /tmp/m.json
+          python - <<'PY'
+          import json
+          committed = json.load(open("data/manifest.json")); fresh = json.load(open("/tmp/m.json"))
+          for k in ("source_sha256", "n_sections", "n_chunks"):
+              assert committed[k] == fresh[k], (k, committed[k], fresh[k])
+          print("corpus reproducible:", fresh["n_sections"], "sections,", fresh["n_chunks"], "chunks")
+          PY
+      - run: pytest -q
+      - name: retrieval regression gate (LTR must beat hybrid; numbers from the committed report)
+        run: python scripts/regression_gate.py
+  image:
+    runs-on: ubuntu-latest
+    needs: checks
+    steps:
+      - uses: actions/checkout@v4
+      - name: build the service image and hit /health
+        run: |
+          docker build -t cfr-assistant .
+          docker run -d -p 8000:8000 --name svc cfr-assistant
+          for i in $(seq 1 60); do curl -sf localhost:8000/health && break; sleep 2; done

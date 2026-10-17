@@ -1,0 +1,26 @@
+{
+  "source": "eCFR versioner API, title 38 parts 3-4",
+  "issue_date": "2026-08-27",
+  "source_sha256": {
+    "38cfr_part3.xml": "56196667ebe71649",
+    "38cfr_part4.xml": "dd3e05f1952d0f4c"
+  },
+  "n_sections": 373,
+  "n_chunks": 1294,
+  "per_part": [
+    {
+      "part": "3",
+      "n_sections": 281,
+      "n_chunks": 970,
+      "avg_words": 204.0,
+      "max_words": 504
+    },
+    {
+      "part": "4",
+      "n_sections": 92,
+      "n_chunks": 324,
+      "avg_words": 206.0,
+      "max_words": 482
+    }
+  ]
+}

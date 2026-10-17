@@ -1,0 +1,10 @@
+50/344 kept 34 rejected 16
+75/344 kept 53 rejected 22
+100/344 kept 72 rejected 28
+125/344 kept 90 rejected 35
+150/344 kept 105 rejected 45
+175/344 kept 120 rejected 55
+250/344 kept 176 rejected 74
+275/344 kept 191 rejected 84
+300/344 kept 209 rejected 91
+kept {'test/formal': 118, 'test/plain': 118, 'test/unanswerable': 30, 'train/formal': 124, 'train/plain': 124} rejected 102

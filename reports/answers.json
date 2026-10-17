@@ -1,0 +1,90 @@
+{
+ "judge_check": {
+  "reference_judged_correct": 1.0,
+  "other_reference_judged_incorrect": 1.0,
+  "n": 50
+ },
+ "summary": {
+  "3B + cross-encoder": {
+   "answer_correct": 0.77,
+   "gold_cited": 0.7,
+   "false_refusal": 0.04,
+   "refused_unanswerable": 0.767,
+   "grounded_citations": 0.951,
+   "needs_review": 0.162,
+   "p50_latency_s": 6.715,
+   "p95_latency_s": 9.075,
+   "tokens_per_question": 1460.877
+  },
+  "7B + LTR(+CE) + refusal gate": {
+   "answer_correct": 0.77,
+   "gold_cited": 0.85,
+   "false_refusal": 0.13,
+   "refused_unanswerable": 0.833,
+   "grounded_citations": 0.978,
+   "needs_review": 0.015,
+   "p50_latency_s": 13.097,
+   "p95_latency_s": 17.862,
+   "tokens_per_question": 1139.308
+  },
+  "7B + cross-encoder": {
+   "answer_correct": 0.83,
+   "gold_cited": 0.87,
+   "false_refusal": 0.03,
+   "refused_unanswerable": 0.933,
+   "grounded_citations": 0.98,
+   "needs_review": 0.023,
+   "p50_latency_s": 13.459,
+   "p95_latency_s": 18.192,
+   "tokens_per_question": 1453.508
+  },
+  "7B + hybrid (no reranker)": {
+   "answer_correct": 0.8,
+   "gold_cited": 0.86,
+   "false_refusal": 0.02,
+   "refused_unanswerable": 0.867,
+   "grounded_citations": 0.971,
+   "needs_review": 0.038,
+   "p50_latency_s": 13.888,
+   "p95_latency_s": 19.188,
+   "tokens_per_question": 1455.708
+  }
+ },
+ "by_style": {
+  "3B + cross-encoder|formal": {
+   "answer_correct": 0.8,
+   "gold_cited": 0.7
+  },
+  "3B + cross-encoder|plain": {
+   "answer_correct": 0.74,
+   "gold_cited": 0.7
+  },
+  "7B + LTR(+CE) + refusal gate|formal": {
+   "answer_correct": 0.82,
+   "gold_cited": 0.9
+  },
+  "7B + LTR(+CE) + refusal gate|plain": {
+   "answer_correct": 0.72,
+   "gold_cited": 0.8
+  },
+  "7B + cross-encoder|formal": {
+   "answer_correct": 0.88,
+   "gold_cited": 0.92
+  },
+  "7B + cross-encoder|plain": {
+   "answer_correct": 0.78,
+   "gold_cited": 0.82
+  },
+  "7B + hybrid (no reranker)|formal": {
+   "answer_correct": 0.78,
+   "gold_cited": 0.9
+  },
+  "7B + hybrid (no reranker)|plain": {
+   "answer_correct": 0.82,
+   "gold_cited": 0.82
+  }
+ },
+ "n_answerable": 100,
+ "n_unanswerable": 30,
+ "refusal_threshold": 0.16145039962285512
+}

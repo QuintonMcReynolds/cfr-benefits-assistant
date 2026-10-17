@@ -1,0 +1,5 @@
+# Apple silicon only: local LLM backend + figures
+-r requirements.txt
+mlx==0.32.4
+mlx-lm==0.32.2
+matplotlib==3.11.2

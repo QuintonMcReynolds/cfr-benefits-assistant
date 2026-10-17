@@ -1,0 +1,60 @@
+W1017 02:23:01.075000 42065 .venv/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+candidates built in 154s
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+/Volumes/CuetipDev/cfr-benefits-assistant/.venv/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+                         recall@1  recall@3  recall@5  recall@10  mrr@10
+method                                                                  
+bm25                        0.729     0.814     0.843      0.898   0.782
+dense                       0.729     0.886     0.915      0.945   0.809
+hybrid                      0.775     0.890     0.924      0.962   0.839
+hybrid+LTR                  0.784     0.873     0.898      0.932   0.834
+hybrid+LTR(+ce feature)     0.797     0.898     0.936      0.945   0.851
+hybrid+cross-encoder        0.792     0.928     0.953      0.966   0.863
+                        recall@1        recall@5        mrr@10       
+style                     formal  plain   formal  plain formal  plain
+method                                                               
+bm25                       0.898  0.559    0.975  0.712  0.934  0.630
+dense                      0.856  0.602    0.958  0.873  0.902  0.717
+hybrid                     0.907  0.644    0.975  0.873  0.937  0.742
+hybrid+LTR                 0.924  0.644    0.975  0.822  0.948  0.721
+hybrid+LTR(+ce feature)    0.932  0.661    0.983  0.890  0.952  0.749
+hybrid+cross-encoder       0.881  0.703    0.992  0.915  0.932  0.795
+{
+ "calibration": "5th percentile of out-of-fold top scores on answerable train questions (5-fold by section)",
+ "threshold_ltr": 0.20189399448274067,
+ "ltr": {
+  "auroc_answerable_vs_not": 0.7987288135593222,
+  "refused_unanswerable": 0.13333333333333333,
+  "refused_answerable": 0.038135593220338986,
+  "n_unanswerable": 30
+ },
+ "threshold_ltr_ce": 0.16145039962285512,
+ "ltr_ce": {
+  "auroc_answerable_vs_not": 0.8375706214689266,
+  "refused_unanswerable": 0.36666666666666664,
+  "refused_answerable": 0.07627118644067797,
+  "n_unanswerable": 30
+ }
+} {"candidates_ms_p50": 3.765687499253545, "cross_encoder_ms_p50": 299.07029150490416}
